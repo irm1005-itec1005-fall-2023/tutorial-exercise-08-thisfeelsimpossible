@@ -33,12 +33,15 @@ YOU DO NOT NEED TO MODIFY THE HTML FOR THIS EXERCISE
 }
 
 .flex-split img {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
  /* 1: Add width set to 100% so that the images take up their full space */
 
  /* 2. Also, set the aspect ratio to 2 /1 using the property - aspect-ratio: 2 / 1; */
 
  /* Object fit cover helps make sure our image displays properly */
- object-fit: cover;
+ 
 }
 
 /*
@@ -58,6 +61,18 @@ YOU DO NOT NEED TO MODIFY THE HTML FOR THIS EXERCISE
   }
 
 */
+
+@media (min-width: 750px) {
+  .flex-split {
+   display: flex;
+  }
+
+  .flex-split > * + * {
+    margin-left: 2rem;
+  }
+
+}
+
 
 
 /* Add step 3 here */
